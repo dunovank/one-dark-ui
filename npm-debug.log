@@ -12,7 +12,6 @@
 5 verbose version.write   theme: 'ui',
 5 verbose version.write   version: '0.1.0',
 5 verbose version.write   description: 'One Dork Fork of One Dark UI.',
-5 verbose version.write   license: 'MIT',
 5 verbose version.write   repository: { type: 'git', url: 'https://github.com/dunovank/one-dork-ui' },
 5 verbose version.write   engines: { atom: '>0.99.0' },
 5 verbose version.write   readmeFilename: 'README.md',

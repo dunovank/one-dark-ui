@@ -4,6 +4,6 @@ The fancy icons shown in the screenshot can be installed either by copying the f
 
 If you dig the syntax theme below go check out [oceans16-atom](https://github.com/dunovank/oceans16-atom) repo!
 
-![Editor View](https://github.com/dunovank/one-dork-ui/blob/master/screens/editor.png)
+![Editor View](https://github.com/dunovank/one-dork-ui/raw/master/screens/editor.png)
 
-![Settings View](https://github.com/dunovank/one-dork-ui/blob/master/screens/settings.png)
+![Settings View](https://github.com/dunovank/one-dork-ui/raw/master/screens/settings.png)

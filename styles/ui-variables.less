@@ -1,4 +1,3 @@
-
 // ONE dark UI variables
 // ----------------------------------------------
 
@@ -18,7 +17,7 @@
 
 .ui-saturation() when (@ui-s-h <=  80) { @ui-saturation: min(@ui-s-s,  5%); } // minimize saturation for brown
 .ui-saturation() when (@ui-s-h >   80) and (@ui-s-h <  160) { @ui-saturation: min(@ui-s-s, 12%); } // reduce saturation for green
-.ui-saturation() when (@ui-s-h >= 160) and (@ui-s-l <  @ui-inv) { @ui-saturation: min(@ui-s-s, 48%); } // limit max saturaiotn for very dark backgrounds
+.ui-saturation() when (@ui-s-h >= 160) and (@ui-s-l <  @ui-inv) { @ui-saturation: min(@ui-s-s, 48%); } // limit max saturation for very dark backgrounds
 .ui-saturation() when (@ui-s-h >= 160) and (@ui-s-l >= @ui-inv) { @ui-saturation: @ui-s-s; }
 .ui-saturation();
 
@@ -38,11 +37,11 @@
 @ui-border: hsl(@ui-hue, @ui-saturation, @ui-lightness-border);
 
 
-
 // Official variables
 // These variables must be defined in every theme
 // Source: https://github.com/atom/atom/blob/master/static/variables/ui-variables.less
 // ----------------------------------------------
+
 
 // Text -----------------
 @text-color:            @ui-fg;
@@ -53,11 +52,11 @@
 @text-color-info: #2c85f7;
 @text-color-success: #0fb57a;
 @text-color-warning: #e48c69;
-@text-color-error: #ce491c;
+@text-color-error: hsl(  9, 100%, 64%);
 
 // Background -----------------
-@background-color-info:    #2f6a9d;
-@background-color-success: #1ca07f;
+@background-color-info:    hsl(208, 100%, 50%);
+@background-color-success: hsl(160,  70%, 42%);
 @background-color-warning: hsl(32,   60%, 50%);
 @background-color-error:   hsl(0,    70%, 50%);
 
@@ -65,6 +64,7 @@
 @background-color-selected:  lighten(@base-background-color, 8%);
 
 @app-background-color: @level-3-color;
+
 
 
 // Base -----------------
@@ -76,7 +76,7 @@
 @pane-item-background-color:       @base-background-color;
 @pane-item-border-color:           @base-border-color;
 
-@input-background-color:           hsla(0,0%,0%,.2);
+@input-background-color:           darken(@base-background-color, 6%);
 @input-border-color:               @base-border-color;
 
 @tool-panel-background-color:      @level-3-color;
@@ -105,15 +105,15 @@
 @tree-view-background-color:       @level-3-color;
 @tree-view-border-color:           @base-border-color;
 
-@ui-site-color-1: hsl(208, 100%, 50%); // green
-@ui-site-color-2: hsl(160,  70%, 42%); // blue
+@ui-site-color-1: hsl(208, 100%, 50%); // blue
+@ui-site-color-2: hsl(160,  70%, 42%); // green
 @ui-site-color-3: hsl(32,   60%, 50%); // orange
 @ui-site-color-4: #D831B0;             // pink
 @ui-site-color-5: #EBDD5B;             // yellow
 
 
 // Sizes -----------------
-@font-size:               13px;
+@font-size:               12px;
 @input-font-size:         14px;
 @disclosure-arrow-size:   12px;
 
@@ -127,7 +127,7 @@
 
 
 // Font -----------------
-@font-family: sans-serif; //'Ubuntu Sans', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
 
 
 
@@ -198,7 +198,7 @@
 // Sizes (Custom) -----------------
 
 @ui-size:                 1em;
-@ui-input-size:           @ui-size*1.25;
+@ui-input-size:           @ui-size*1.15;
 @ui-padding:              @ui-size*1.5;
 @ui-padding-pane:         @ui-size*.5;
 @ui-padding-icon:         @ui-padding/3.3;

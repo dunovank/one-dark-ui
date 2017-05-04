@@ -79,6 +79,7 @@
       right: .35em;
       z-index: 1;
       color: @text-color-info;
+      font-weight: bold;
       padding: 0 @tab-padding/2.85;
       height: @ui-tab-height*.69;
       line-height: @ui-tab-height*.69;
@@ -88,15 +89,18 @@
       transition: transform .12s;
       border-radius: 4px;
       &:hover {
-        background-color: hsla(0,0%,100%,.035);
-        color: #E26A6A;
+        background-color: hsla(0,0%,100%,.05);
+        color: desaturate(#E26A6A,20%);
+        font-weight: bold;
         opacity: .8;
       }
       &:active {
-        color: #E26A6A;
+        color: desaturate(#E26A6A,5%);
+        font-weight: bold;
       }
       &::before {
         font-size: inherit;
+        font-weight: bold;
       }
     }
     &:hover .close-icon {
@@ -155,13 +159,25 @@
       color: @text-color-info;
       border: none;
       border-bottom: @tab-border-size solid transparent;
+      &:hover {
+        background-color: hsla(0,0%,100%,.035);
+        color: desaturate(#E26A6A,20%);
+        font-weight: bold;
+        opacity: .8;
+      }
+      &:active {
+        color: desaturate(#E26A6A,5%);
+        font-weight: bold;
+      }
     }
     &:not(:hover) .close-icon {
       right: 0;
       top: 0;
       width: initial;
       height: @ui-tab-height;
+      line-height: @ui-tab-height;
       border: none;
+      padding: 0 @tab-padding/1.5;
       border-bottom: @tab-border-size solid transparent;
       border-radius: 3px;
       transform: scale(1);

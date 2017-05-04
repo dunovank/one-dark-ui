@@ -4,7 +4,7 @@
 @tab-min-width: @ui-size*7; // icon + 5 characters
 @tab-padding: @ui-padding/1.5;
 @modified-icon-width: @ui-size;
-@ui-tab-height: 34px;
+@ui-tab-height: 33px;
 
 .tab-bar {
   height: @ui-tab-height;
@@ -63,7 +63,6 @@
 
 
     // Title ----------------------
-
     .title {
       position: relative;
       z-index: 1;
@@ -75,28 +74,26 @@
     &:hover .title {
       -webkit-mask-position: -@modified-icon-width 0;
     }
-
-
-    // Close icon ----------------------
-
     .close-icon {
-      top: 0;
-      right: 0;
+      top: .5em;
+      right: .35em;
       z-index: 1;
       color: @text-color-info;
-      padding: 0 @tab-padding/1.25;
-      height: @ui-tab-height;
-      line-height: @ui-tab-height;
+      padding: 0 @tab-padding/2.85;
+      height: @ui-tab-height*.69;
+      line-height: @ui-tab-height*.69;
       text-align: center;
+      vertical-align: middle;
       transform: scale(0);
-      transition: transform .08s;
+      transition: transform .12s;
+      border-radius: 4px;
       &:hover {
-        color: #2c85f7;
-        opacity: .8
+        background-color: hsla(0,0%,100%,.035);
+        color: #E26A6A;
+        opacity: .8;
       }
       &:active {
-        color: #2c85f7;
-        opacity: .5;
+        color: #E26A6A;
       }
       &::before {
         font-size: inherit;
@@ -104,7 +101,7 @@
     }
     &:hover .close-icon {
       transform: scale(1);
-      transition-duration: .16s;
+      transition-duration: .12s;
     }
   }
 
@@ -166,7 +163,7 @@
       height: @ui-tab-height;
       border: none;
       border-bottom: @tab-border-size solid transparent;
-      border-radius: 0;
+      border-radius: 3px;
       transform: scale(1);
       &::before {
         content: "\f052";
@@ -228,13 +225,15 @@
   top: @tab-border-size;
   left: @tab-border-size;
   bottom: @tab-border-size;
-  width: 2px;
-  border-top-left-radius: inherit;
-  border-radius: @component-border-radius 0;
-  background: @base-accent-color;
+  width: 3px;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 1px !important;
+  background: @background-color-info;
   opacity: 0;
   transform: scaleY(0);
-  transition: opacity .16s, transform .16s cubic-bezier(.80, 0, .90, .53);
+  transition: opacity .01s, transform .19s cubic-bezier(.0, .6, .20, 1);
 
   .theme-one-light-ui & {
     left: 0;
@@ -244,5 +243,5 @@
 atom-pane.active .tab.active:before {
   opacity: 1;
   transform: scaleY(1);
-  transition: opacity .16s, transform .32s cubic-bezier(0,.6,.2,1);
+  transition: opacity .01s, transform .32s cubic-bezier(0,.6,.2,1);
 }
